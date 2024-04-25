@@ -3,7 +3,9 @@
 {% block content %}
     <ul>
         {% for item in items %}
-            <li>{{ item.title }}</li>
+            <li>
+                <h3><a href="{% url 'portfolio_detail' item.id %}">{{ item.title }}</a></h3>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
