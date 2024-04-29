@@ -19,6 +19,17 @@
             {% empty %}
                 <p>No comments yet. Be the first to comment!</p>
         {% endfor %}
+    
+        {% if user.is_authenticated %}
+            <div class="add-comment">
+                <h3>Add a comment</h3>
+                <form method = "post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Post Comment</button>
+            </form>
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
