@@ -8,6 +8,10 @@ class PortfolioItem(models.Model):
     image = models.ImageField(upload_to='portfolio_images/')
     link = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    likes = models.ManyToManyField(User, related_name='portfolio_likes')
+
+    def number_of_likes(self):
+        return self.likes.count()
 
 class Comment(models.Model):
     portfolio_item = models.ForeignKey(PortfolioItem, on_delete=models.CASCADE, related_name='comments')

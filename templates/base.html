@@ -8,20 +8,36 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href = "{%url 'portfolio_list'%}">Portfolio</a>
-        </nav>
-    </header>
-    <main>
-        {% block content %}
+<header>
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+                <li>
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" style="background:none;border:none;color:blue;cursor:pointer;">Logout
+                        </button>
+                    </form>
+
+                </li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            {% endif %}
+            <li><a href="{% url 'portfolio_list' %}">Portfolio</a></li>
+        </ul>
+
+    </nav>
+</header>
+<main>
+    {% block content %}
         <!-- Content unique to each page will go here -->
-        {% endblock %}
-    </main>
-    <footer>
-        <p>&copy; 2024 My Portfolio Site</p>
-    </footer>
-    <!-- Add links to JavaScript files here -->
-    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock %}
+</main>
+<footer>
+    <p>&copy; 2024 My Portfolio Site</p>
+</footer>
+<!-- Add links to JavaScript files here -->
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
