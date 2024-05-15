@@ -1,0 +1,23 @@
+<PortfolioItems>
+    <PortfolioItem>
+        <Title>AI-Powered Chatbot</Title>
+        <Description>A sophisticated AI-powered chatbot capable of understanding and responding to natural language queries. Utilizes advanced machine learning algorithms for enhanced user interaction.</Description>
+        <Image>chatbot_image.jpg</Image>
+        <Link>https://openai.com/chatgpt</Link>
+        <Created_at>2023-05-15T10:30:00</Created_at>
+    </PortfolioItem>
+    <PortfolioItem>
+        <Title>Web Development Framework</Title>
+        <Description>A modern web development framework that simplifies the process of building dynamic and responsive websites. Includes comprehensive documentation and examples.</Description>
+        <Image>web_framework.jpg</Image>
+        <Link>https://www.djangoproject.com/</Link>
+        <Created_at>2023-07-22T14:45:00</Created_at>
+    </PortfolioItem>
+    <PortfolioItem>
+        <Title>Mobile App for Task Management</Title>
+        <Description>A user-friendly mobile application designed to help users manage their tasks efficiently. Features include task prioritization, reminders, and progress tracking.</Description>
+        <Image>task_app.jpg</Image>
+        <Link>https://todoist.com/</Link>
+        <Created_at>2023-03-11T09:20:00</Created_at>
+    </PortfolioItem>
+</PortfolioItems>
